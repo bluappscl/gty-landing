@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -12,8 +11,9 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'GTY - Expertos en TI',
   ignoreTitleTemplate: true,
 };
 ---
@@ -21,34 +21,24 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-      { text: 'Learn more', href: '#features' },
-    ]}
-    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
+  <Hero  
+    image={{ src: '~/assets/images/linkeid.jpeg', alt: 'TrabajadoresGTY' }}
   >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 3.0</span> + Tailwind CSS
-    </Fragment>
+  <Fragment slot="title">
+    Somos expertos <span class="hidden xl:inline">en</span>
+    <span class="text-accent dark:text-white highlight"> TI</span>
+    .Entregamos soluciones TI para tu negocio.
+  </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 3.0
-        + Tailwind CSS.</span
+      <span class="sm:inline">En
+        <span class="font-semibold  text-blue-600">GTY</span> , nos enorgullece ser tu aliado estratégico en el mundo en constante evolución de la Tecnología de la Información (TI). Con un equipo de expertos altamente calificados y apasionados, estamos comprometidos en proporcionar soluciones innovadoras y a medida para potenciar el rendimiento y el éxito de tu negocio.</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages
-      & Blogs.
+      
+      
     </Fragment>
   </Hero>
+ 
 
   <!-- Note Widget ******************* -->
 
@@ -58,46 +48,21 @@ const metadata = {
 
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    title="¿Quiénes Somos?"
+    subtitle="Somos una empresa joven y moderna compuesta de profesionales con vasta experiencia en el desarrollo y soporte de proyectos informáticos."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Misión',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
+          'Ayudar a nuestros clientes a mejorar sus procesos productivos aportando con nuestro conocimiento, compromiso y experiencias, para hacer más eficientes sus procesos negocio y mejorar sus sistemas informáticos que los sostienes e proveen información de gestión de ellos. Generar relaciones de confianza y de largo plazo que permitan alcanzar sus metas estratégicas y mejorar el desempeño de su negocio.',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Visión',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'Ser una empresa consultora reconocida en el mercado por la calidad y excelencia de nuestros resultados, como consecuencia del conocimiento, profesionalismo y compromiso de cada uno de los integrantes de nuestro equipo. Consolidarnos como el Partner Tecnológico por excelencia de nuestros clientes.',
         icon: 'tabler:components',
-      },
-      {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Search Engine Optimization (SEO)',
-        description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
-      },
+      }
     ]}
   />
 
@@ -216,95 +181,48 @@ const metadata = {
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
-    }}
-  />
+  
+
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="Nuestros servicios"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        title: 'Mantenimiento Sistema SAP ',
+        description: "Contamos con consultores funcionales en los módulos SD, MM, HCM, FI-CO, CS, WTY, HCM, entre otros. Además, contamos con un equipo de consultores técnicos ABAP con conocimientos funcionales en los principales módulos de SAP.",
         icon: 'flat-color-icons:template',
       },
       {
-        title: 'Heros',
+        title: 'Integraciones con sistemas ERP',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+          "Contamos con experiencia en integración de diversas aplicaciones y softwares comerciales con ERP's, tales como: Salesforce, Rindegastos, Gaxu, Acepta, Qlikview, entre otras plataformas.",
         icon: 'flat-color-icons:gallery',
       },
       {
-        title: 'Features',
+        title: 'Consultoría de Procesos',
         description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+          'Analizamos y alineamos cada proceso proponiendo recomendaciones para generar soluciones eficientes, efectivas y a la medida; con el foco de maximizar la rentabilidad y la sustentabilidad de las empresas.',
         icon: 'flat-color-icons:approval',
       },
       {
-        title: 'Content',
+        title: 'Desarrollo Web y Mobile',
         description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+          "Construimos páginas intranet y extranet web que te ayudan en los procesos de la empresa y a gestionar la información desde cualquier lugar y dispositivo; Desarrollamos aplicaciones para Iphone, Android y Tablet. Nos enfocamos en la creatividad, simplicidad, usabilidad y experiencia de usuario; Ofrecemos un servicio de mantenimiento de paginas web integrales y personalizadas para tu negocio.",
         icon: 'flat-color-icons:document',
       },
       {
-        title: 'Call-to-Action',
+        title: 'Gestión de Proyectos',
         description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+          'A través de nuestros servicios vinculados a la práctica de Gestión de Proyectos contribuimos a que las organizaciones generen valor para sus clientes, accionistas y empleados; por medio del desarrollo de proyectos que generalmente apuntan a alcanzar la estrategia y por ende la visión de cada organización.',
         icon: 'flat-color-icons:advertising',
       },
       {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        title: 'Outsourcing',
+        description: 'Apoyamos poniendo en dispocisión de nuestros clientes a los mejores profesionales para que se integren a tus equipos de trabajo, conocemos el mercado laboral y tenemos experiencia en distintas industrias, ayudamos a encontrar a los mejores profesionales en cada area para cubrir cada puesto de trabajo.',
         icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
+      }
     ]}
   >
     <Fragment slot="bg">
