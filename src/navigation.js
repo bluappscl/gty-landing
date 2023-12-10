@@ -1,4 +1,4 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
@@ -119,7 +119,6 @@ export const headerData = {
 
 export const footerData = {
   links: [
-    
     {
       title: 'Platform',
       links: [
@@ -128,12 +127,7 @@ export const footerData = {
         { text: 'Atom', href: '#' },
         { text: 'Electron', href: '#' },
         { text: 'GTY Desktop', href: '#' },
-        
       ],
-      
     }
   ],
-  footNote: `
-         <img src="./public/images/gty.svg" alt="A sleeping cat.">
-  `,
 };

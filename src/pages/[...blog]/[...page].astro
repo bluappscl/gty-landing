@@ -13,7 +13,16 @@ export async function getStaticPaths ({ paginate }) {
   return await getStaticPathsBlogList({ paginate });
 }
 
-const { page } = Astro.props;
+interface BlogPage {
+  currentPage: number;
+  data: any[]; // Puedes reemplazar 'any' con el tipo real esperado para los datos
+  url: {
+    prev?: string;
+    next?: string;
+  };
+}
+
+const { page } = Astro.props as { page: BlogPage };
 const currentPage = page.currentPage ?? 1;
 
 // const allCategories = await findCategories();
