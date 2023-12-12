@@ -5,15 +5,7 @@ import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Brands from '~/components/widgets/Brands.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Content from '~/components/widgets/Content.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
-
-
-import Steps from '~/components/widgets/Steps.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'GTY - Expertos en TI',
@@ -32,9 +24,7 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="sm:inline"
-        >En
-        <span class="font-semibold text-justify text-blue-600">GTY</span> , nos enorgullece ser tu aliado estratégico en
+      <span class="sm:inline " >En<span class="font-semibold text-blue-600">GTY</span> , nos enorgullece ser tu aliado estratégico en
         el mundo en constante evolución de la Tecnología de la Información (TI). Con un equipo de expertos altamente
         calificados y apasionados, estamos comprometidos en proporcionar soluciones innovadoras y a medida para
         potenciar el rendimiento y el éxito de tu negocio.</span
@@ -67,73 +57,6 @@ const metadata = {
       },
     ]}
   />
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    id="Clientes"
-    title="Nuestros clientes"
-    items={[
-      {
-        title: 'Coagra S.A. distribuidor de insumos y servicios para el sector agrícola.',
-        description: `<div>
-                        <img src="/images/paises/chile.png" alt="imagen no encontrada" width="30px">
-                        <img class="pt-1" src="/images/clientes/retail/coagra.png" alt="imagen no encontrada">
-                      </div>`,
-      },
-      {
-        title: 'Copeval S.A. distribuidor integral de insumos y servicios para el sector agrícola.',
-        description: `<img src="/images/paises/chile.png" alt="imagen no encontrada" width="30px">
-                      <img class="pt-1"  src="/images/clientes/retail/copeval.png" alt="imagen no encontrada">`,
-      },
-    ]}
-    image={{
-      src: '/backgroundImages/ritail.jpg',
-      alt: 'imagen no encontrada',
-    }}
-  >
-    <Fragment slot="content">
-      <h4 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">RETAIL</h4>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'Coagra S.A. distribuidor de insumos y servicios para el sector agrícola.',
-        description: `<div>
-                        <img src="/images/paises/chile.png" alt="imagen no encontrada" width="30px">
-                        <img class="pt-1" src="/images/clientes/medica/alatheia.png" alt="imagen no encontrada">
-                      </div>`,
-      },
-      {
-        title: 'Copeval S.A. distribuidor integral de insumos y servicios para el sector agrícola.',
-        description: `<img src="/images/paises/chile.png" alt="imagen no encontrada" width="30px">
-                      <img class="pt-1"  src="/images/clientes/medica/imagen-salud.png" alt="imagen no encontrada">`,
-      },
-    ]}
-    image={{
-      src: 'backgroundImages/medico.jpeg',
-      alt: 'Imagen no encontrada',
-    }}
-  >
-    <Fragment slot="content">
-      <h4 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Médico</h4>
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-
-
   <!-- FEATURES2 (SERVICIOS) Widget **************** -->
   <Features2
     title="Nuestros servicios"
@@ -165,18 +88,19 @@ const metadata = {
         title: 'Gestión de Proyectos',
         description:
           'A través de nuestros servicios vinculados a la práctica de Gestión de Proyectos contribuimos a que las organizaciones generen valor para sus clientes, accionistas y empleados; por medio del desarrollo de proyectos que generalmente apuntan a alcanzar la estrategia y por ende la visión de cada organización.',
-        icon: 'flat-color-icons:advertising',
+        icon: '',
       },
       {
         title: 'Outsourcing',
         description: 'Apoyamos poniendo en dispocisión de nuestros clientes a los mejores profesionales para que se integren a tus equipos de trabajo, conocemos el mercado laboral y tenemos experiencia en distintas industrias, ayudamos a encontrar a los mejores profesionales en cada area para cubrir cada puesto de trabajo.',
-        icon: 'flat-color-icons:currency-exchange',
+        icon: 'tabler:app-window',
       }
     ]}
+    
   >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
   </Features2>
 
 
@@ -241,7 +165,11 @@ const metadata = {
         src: '/images/clientes/retail/copeval.png',
         alt: 'Imagen no encontrada',
       },
+      
     ]}
+
+    
+    
   />
 
   <!--Componente Steps2 PARA CONTACTENOS -->
@@ -262,6 +190,12 @@ const metadata = {
       icon: 'tabler:headset',
     }
   ]}
-/>
+>
+<Fragment slot="bg">
+  <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+</Fragment>
+</Steps2>
+
+
 
 </Layout>
