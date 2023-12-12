@@ -120,7 +120,6 @@ export const headerData = {
 
 export const footerData = {
   links: [
-    
     {
       title: 'Platform',
       links: [
@@ -129,12 +128,7 @@ export const footerData = {
         { text: 'Atom', href: '#' },
         { text: 'Electron', href: '#' },
         { text: 'GTY Desktop', href: '#' },
-        
       ],
-      
     }
-  ],
-  footNote: `
-         <img src="/images/gty.svg" alt="logo no encontrado">
-  `,
+  ]
 };

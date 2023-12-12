@@ -4,8 +4,8 @@ import { getPermalink } from '~/utils/permalinks';
 import Button from '~/components/ui/Button.astro';
 
 export interface Props {
-  prevUrl: string;
-  nextUrl: string;
+  prevUrl: string | undefined;
+  nextUrl: string | undefined;
   prevText?: string;
   nextText?: string;
 }
@@ -14,7 +14,7 @@ const { prevUrl, nextUrl, prevText = 'Newer posts', nextText = 'Older posts' } =
 ---
 
 {
-  (prevUrl || nextUrl) && (
+  (prevUrl !== undefined || nextUrl !== undefined) && (
     <div class="container flex">
       <div class="flex flex-row mx-auto container justify-between">
         <Button
