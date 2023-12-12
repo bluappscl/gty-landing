@@ -1,9 +1,10 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getBlogPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
       text: 'Nosotros',
+      href: getPermalink('/#QuienesSomos'),
       links: [
         {
           text: 'SaaS',
@@ -28,7 +29,7 @@ export const headerData = {
       links: [
         {
           text: 'Features (Anchor Link)',
-          href: getPermalink('/#features'),
+          href: getPermalink('/#featuress'),
         },
         {
           text: 'Services',
@@ -134,6 +135,6 @@ export const footerData = {
     }
   ],
   footNote: `
-         <img src="./public/images/gty.svg" alt="A sleeping cat.">
+         <img src="/images/gty.svg" alt="logo no encontrado">
   `,
 };

@@ -257,12 +257,15 @@ export interface Faqs extends Headline, Widget {
 }
 
 export interface Steps extends Headline, Widget {
+  
   items: Array<{
     title: string;
     description?: string;
+    number?: string;
     icon?: string;
     classes?: Record<string, string>;
   }>;
+  
   callToAction?: string | CallToAction;
   image?: string | Image;
   isReversed?: boolean;
