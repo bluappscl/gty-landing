@@ -123,11 +123,8 @@ export const footerData = {
     {
       title: 'Platform',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'GTY Desktop', href: '#' },
+        { text: 'siguenos', href: '#' },
+        
       ],
     }
   ]
