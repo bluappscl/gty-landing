@@ -10,7 +10,7 @@ site:
 metadata:
   title:
     default: GTY
-    template: '%s — AstroWind'
+    template: '%s — Expertos en TI'
   description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
   robots:
     index: true
