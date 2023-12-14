@@ -17,6 +17,7 @@ const {
   panel: panelClass = "",
   title: titleClass = "",
   description: descriptionClass = "",
+  description2: description2Class = "",
   icon: defaultIconClass = "text-primary",
 } = classes;
 ---
@@ -41,6 +42,7 @@ const {
         ({
           title,
           description,
+          description2,
           icon,
           callToAction,
           classes: itemClasses = {},
@@ -79,6 +81,16 @@ const {
                   itemClasses?.description
                 )}
                 set:html={description}
+              />
+            )}
+            {description2 && (
+              <p
+                class={twMerge(
+                  "text-muted mt-2",
+                  description2Class,
+                  itemClasses?.description2
+                )}
+                set:html={description2}
               />
             )}
             {callToAction && (

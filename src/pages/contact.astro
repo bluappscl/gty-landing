@@ -5,72 +5,66 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contacto',
+  ignoreTitleTemplate: true
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="¡Bienvenido a la página de contacto de GTY!" title="Contactanos!" />
 
   <ContactUs
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="¡Envíanos un mensaje hoy!"
+    subtitle = 'Ya sea que tengas preguntas sobre nuestros proyectos y servicios, estés interesado en colaborar con nosotros o simplemente quieras compartir tus comentarios, estamos aquí para escucharte.',
     inputs={[
       {
         type: 'text',
-        name: 'name',
-        label: 'Name',
+        name: 'Name',
+        label: 'Nombre',
       },
       {
         type: 'email',
-        name: 'email',
-        label: 'Email',
+        name: 'Email',
+        label: 'Correo electrónico',
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Mensaje',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'Al enviar este formulario de contacto, usted reconoce y acepta la recopilación de su información personal.',
     }}
-    description="Our support team typically responds within 24 business hours."
-  />
+   
+  >
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+  </ContactUs>
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+
+    title="Estamos aquí para ayudarte!"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: 'Contacto soporte técnico',
+        description: `📞 +569 57350439`,
+        description2: '📧 soporte@gty.cl',
+        icon: 'tabler:phone-check',
       },
       {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+        title: 'Contacto comercial',
+        description: '📞  +569 57350439',
+        description2:'📧 ventas@gty.cl',
+        icon: 'tabler:headset'
       },
       {
-        title: 'Technical support',
-        description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
-      },
-      {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
+        title: 'Encuentranos en',
+        description: 'Rancagura...',
         icon: 'tabler:map-pin',
       },
     ]}

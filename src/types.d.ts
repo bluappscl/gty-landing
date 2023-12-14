@@ -103,6 +103,7 @@ export interface Widget {
 export interface Headline {
   title?: string;
   subtitle?: string;
+  subtitle2?: string;
   tagline?: string;
   classes?: Record<string, string>;
 }
@@ -130,6 +131,7 @@ export interface Stat {
 export interface Item {
   title?: string;
   description?: string;
+  description2?: string;
   icon?: string;
   classes?: Record<string, string>;
   callToAction?: CallToAction;

@@ -113,7 +113,7 @@ export const headerData = {
     },
     {
       text: 'Soporte',
-      href: '#',
+      href: 'https://gtickets-v2.gty.cl/login'
     },
   ]
 };
