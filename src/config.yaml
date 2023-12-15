@@ -11,7 +11,7 @@ metadata:
   title:
     default: GTY
     template: '%s — Expertos en TI'
-  description: ""
+  description: "GTY - Expertos en TI"
   robots:
     index: true
     follow: true

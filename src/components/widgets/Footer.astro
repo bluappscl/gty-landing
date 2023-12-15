@@ -1,7 +1,5 @@
 ---
-import { Icon } from 'astro-icon/components';
-import { SITE } from '~/utils/config';
-import { getHomePermalink } from '~/utils/permalinks';
+
 
 interface Link {
   text?: string;
@@ -23,76 +21,23 @@ export interface Props {
   theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const { theme = 'light' } = Astro.props;
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
   <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
-    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12">
-      <div class="col-span-12 lg:col-span-4">
-        <div class="mb-2">
-          <a class="inline-block font-bold text-xl" href={getHomePermalink()}>{SITE?.name}</a>
+    <div class="grid grid-cols-12 gap-4 gap-y-8 sm:gap-8 py-8 md:py-12 ">
+      <div class="col-span-12 flex flex-col items-center"> <!-- Modificado a flex-col y items-center -->
+        <span class="self-center mb-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
+          <svg width="190" height="85" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" overflow="hidden"><defs>
+            <clipPath id="clip1"><rect x="0" y="0" width="403.949" height="197"/></clipPath></defs><g transform="translate(-90 -590)"><g><g transform="matrix(0.480952 0 0 0.480952 93.8476 592.405)"><g clip-path="url(#clip1)" transform="matrix(1.0026 0 0 1 8.06194e-07 4.16122e-05)"><use width="100%" height="100%" xlink:href="#img0" transform="scale(1.9899 1.9899)"></use></g></g></g></g></svg>
+        </span>
+        <div class="flex items-center pl-5"> <p class="text-gray-700 dark:text-gray-300 mb-2">Síguenos en:</p>
+          <a href="https://www.linkedin.com/company/gty"><img src="/backgroundImages/brand-linkedin.png" alt="LinkeIn" class="w-6 h-6" /></a>
         </div>
-        <div class="text-sm text-muted">
-          {
-            secondaryLinks.map(({ text, href }) => (
-              <a
-                class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out mr-2 rtl:mr-0 rtl:ml-2"
-                href={href}
-                set:html={text}
-              />
-            ))
-          }
-        </div>
-      </div>
-      {
-        links.map(({ title, links }) => (
-          <div class="col-span-6 md:col-span-3 lg:col-span-2">
-            <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
-            {links && Array.isArray(links) && links.length > 0 && (
-              <ul class="text-sm">
-                {links.map(({ text, href, ariaLabel }) => (
-                  <li class="mb-2">
-                    <a
-                      class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
-                      href={href}
-                      aria-label={ariaLabel}
-                    >
-                      <Fragment set:html={text} />
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        ))
-      }
-    </div>
-    <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-      {
-        socialLinks?.length ? (
-          <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
-            {socialLinks.map(({ ariaLabel, href, text, icon }) => (
-              <li>
-                <a
-                  class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
-                  aria-label={ariaLabel}
-                  href={href}
-                >
-                  {icon && <Icon name={icon} class="w-5 h-5" />}
-                  <Fragment set:html={text} />
-                </a>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          ''
-        )
-      }
-
-      <div class="text-sm mr-4 dark:text-slate-400">
-        <Fragment set:html={footNote} />
+        <p>GTY SpA, Copyright © 2023</p>
+       
       </div>
     </div>
   </div>

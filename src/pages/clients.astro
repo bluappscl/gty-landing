@@ -1,8 +1,7 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-
+import Brands from '~/components/widgets/Brands.astro';
 
 const metadata = {
   title: 'Clientes',
@@ -14,41 +13,124 @@ const metadata = {
   <!-- HeroText Widget ******************* -->
 
   <Hero
-   
-  title="Clientes en GTY"
-  subtitle="En GTY, nos complace mostrarte el universo de posibilidades que ofrecemos a través de nuestros servicios y proyectos excepcionales. Nos dedicamos apasionadamente a brindar soluciones innovadoras y a materializar ideas audaces."
-  actions={[{ variant:"secondary", text: 'ver clientes', href: '#clientes' }]}
-  image={{
-    src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-    alt: 'Imagen no encontrada',
-  }}
-/>
+    title="Clientes en GTY"
+    subtitle="En GTY, nos complace mostrarte el universo de posibilidades que ofrecemos a través de nuestros servicios y proyectos excepcionales. Nos dedicamos apasionadamente a brindar soluciones innovadoras y a materializar ideas audaces."
+    actions={[{ variant: 'secondary', text: 'ver clientes', href: '#clientes' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Imagen no encontrada',
+    }}
+  />
 
-  <!-- Pricing Widget ******************* -->
-  <BlogLatestPosts
+  <!-- BRANDS Widget PARA CLIENTES******************* -->
+  <!-- Widget para comercio ************** -->
+
+  <Brands
+    title="Comercio"
     id="clientes"
-    title="Explora nuestro apartado de clientes."
-    information={`En esta sección podrás ver a los clientes de GTY.`}
+    icons={[]}
+    images={[
+      {
+        src: '/images/clientes/comercio/fosforos.png',
+        alt: 'Imagen no encontrada',
+      },
+      {
+        src: '/images/clientes/comercio/py.png',
+        alt: 'Imagen no encontrada',
+      },
+    ]}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </BlogLatestPosts>
-  
+  </Brands>
+ <!-- Widget para Educacion ************** -->
+  <Brands
+    title="Educación"
+    icons={[]}
+    images={[
+      {
+        src: '/images/clientes/educacion/institucion-universitaria.png',
+        alt: 'Imagen no encontrada',
+      },
+      {
+        src: '/images/clientes/educacion/universidad-andres-bello.png',
+        alt: 'Imagen no encontrada',
+      },
+      {
+        src: '/images/clientes/educacion/universidad-los-andes.png',
+        alt: 'Imagen no encontrada',
+      },
+    ]}
+  />
+ <!-- Widget para Gobierno ************** -->
+  <Brands
+    title="Gobierno"
+    icons={[]}
+    images={[
+      {
+        src: '/images/clientes/gobierno/sii.png',
+        alt: 'Imagen no encontrada',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Brands>
+ <!-- Widget para Logística ************** -->
+  <Brands
+    title="Logística"
+    icons={[]}
+    images={[
+      {
+        src: '/images/clientes/logistica/espol.png',
+        alt: 'Imagen no encontrada',
+      },
+      {
+        src: '/images/clientes/logistica/loaded-rolling.png',
+        alt: 'Imagen no encontrada',
+      },
+      {
+        src: '/images/clientes/logistica/tw.png',
+        alt: 'Imagen no encontrada',
+      },
+    ]}
+  />
+ <!-- Widget para Area medica ************** -->
+  <Brands
+    title="Área médica"
+    icons={[]}
+    images={[
+      {
+        src: '/images/clientes/medica/alatheia.png',
+        alt: 'Imagen no encontrada',
+      },
+      {
+        src: '/images/clientes/medica/imagen-salud.png',
+        alt: 'Imagen no encontrada',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Brands>
+ <!-- Widget para Retail ************** -->
+  <Brands
+    title="Retail"
+    icons={[]}
+    images={[
+      {
+        src: '/images/clientes/retail/coagra.png',
+        alt: 'Imagen no encontrada',
+      },
+      {
+        src: '/images/clientes/retail/copeval.png',
+        alt: 'Imagen no encontrada',
+      }
+    ]}
+  />
 
   <!-- Features3 Widget ************** -->
-
-
-
-  <!-- Steps Widget ****************** -->
-
-
-
-  <!-- FAQs Widget ******************* -->
-
-
-
-  <!-- CallToAction Widget *********** -->
-
-
 </Layout>
