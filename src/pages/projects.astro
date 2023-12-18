@@ -1,0 +1,129 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Content from '~/components/widgets/Content.astro';
+
+const metadata = {
+  title: 'Proyectos',
+  ignoreTitleTemplate: true
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[{ variant: 'secondary', text: 'ver proyectos', href: '#proyectos' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+      alt: 'Caos Image',
+    }}
+  >
+    <Fragment slot="title">
+      Proyectos en
+      <span class="text-accent dark:text-white highlight"> GTY</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      En GTY, nos complace mostrarte el universo de posibilidades que ofrecemos a través de nuestros servicios y proyectos excepcionales. Nos dedicamos apasionadamente a brindar soluciones innovadoras y a materializar ideas audaces.
+    </Fragment>
+  </Hero>
+
+  <!-- Stats Widget ****************** -->
+
+  <Content
+    isReversed
+    id = 'proyectos'
+    title="Algunos proyectos de GTY"
+    items={[
+      {
+        title: 'Built on top of Astro 4.0',
+        description:
+          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+      },
+      {
+        title: 'Styled using Tailwind CSS',
+        description:
+          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+      },
+      {
+        title: 'Cross-browser compatibility',
+        description:
+          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+      },
+    ]}
+    image={{
+      src: '/images/servicios/saas-smartcollect.png',
+      alt: 'imagen no encontrada saas2',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Proyecto desarrollado para la empresa Smart Collect
+      </h3>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'High level of customization',
+        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+      },
+      {
+        title: 'Multiple layout possibilities',
+        description:
+          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+      },
+    ]}
+    image={{
+      src: '/images/servicios/saas-tw.png',
+      alt: 'Blueprint Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Proyecto desarrollado para la empresa TW Logística
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    isAfterContent
+    items={[
+      {
+        title: 'Enhanced user engagement',
+        description:
+          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+      },
+      {
+        title: 'Continuous improvement',
+        description:
+          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
+        width: 100,
+      },
+    ]}
+    image={{
+      src: '/backgroundImages/web-mobile.png',
+      alt: 'No se encuentra la imagen web-mobile',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Aplicación web desarrollada para la empresa Copeval
+      </h3>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+</Layout>
