@@ -24,7 +24,7 @@ export const headerData = {
     }, */
     {
       text: 'Soporte',
-      href: 'https://gtickets-v2.gty.cl/login',
+      href: 'https://gty.gtickets.cl/login',
     },
   ],
 };
