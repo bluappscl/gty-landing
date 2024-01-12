@@ -18,10 +18,10 @@ export const headerData = {
       text: 'Proyectos',
       href: getPermalink('/projects'),
     },
-    {
+    /* {
       text: 'Contacto',
       href: getPermalink('/contact'),
-    },
+    }, */
     {
       text: 'Soporte',
       href: 'https://gtickets-v2.gty.cl/login',

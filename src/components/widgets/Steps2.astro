@@ -22,38 +22,22 @@ const {
 ---
 
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto b  ${classes?.container ?? ''}`} bg={bg}>
-  <div class={`flex flex-col gap-8 md:gap-12 md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''}`}>
+  <div class={`flex flex-col items-center justify-center gap-8 md:gap-12  ${isReversed ? 'md:flex-row-reverse' : ''}`}>
     <div class={`w-full lg:w-1/2 gap-8 md:gap-12 ${isReversed ? 'lg:ml-16 md:ml-8 ml-0' : 'lg:mr-16 md:mr-8 mr-0'}`}>
       <Headline
         title={title}
         subtitle={subtitle}
         tagline={tagline}
         classes={{
-          container: 'text-center  md:text-left rtl:md:text-right mb-4 md:mb-8',
+          container: 'text-center rtl:md:text-right mb-4 md:mb-8',
           title: 'mb-4 text-3xl lg:text-4xl font-bold font-heading',
-          subtitle: 'mb-8 text-xl text-muted dark:text-slate-400 text-justify',
-          
-        
+          subtitle: 'mb-8 text-xl text-muted dark:text-slate-400 text-center',
           // ...((classes?.headline as {}) ?? {}),
         }}
       />
-
-      <div class="w-full text-center md:text-left rtl:md:text-right">
-        {
-          typeof callToAction === 'string' ? (
-            <Fragment set:html={callToAction} />
-          ) : (
-            callToAction &&
-            callToAction.text &&
-            callToAction.href && (
-              <Button variant="primary" {...callToAction} class="mb-12 w-auto"/>
-            )
-          )
-        }
-      </div>
     </div>
-    <div class="w-full lg:w-1/2 px-0 ">
-      <ul class="space-y-10">
+    <div class="w-full px-0 ">
+      <ul class="flex flex-row justify-between items-start">
         {
           items && items.length
             ? items.map(({ title: title2, description,number, icon }, index) => (
@@ -68,7 +52,6 @@ const {
                     <p class="text-muted dark:text-gray-400" set:html={description} />
                     <p class="text-muted dark:text-gray-400" set:html={number} />
                    
-
                   </div>
                 </li>
               ))
